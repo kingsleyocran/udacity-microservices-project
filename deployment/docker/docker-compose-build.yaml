@@ -15,4 +15,4 @@ services:
   frontend:
     build:
       context: ../../udagram-frontend  
-    image: ocrankingsley/udagram-frontend:local
+    image: ocrankingsley/udagram-frontend
