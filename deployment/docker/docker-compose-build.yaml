@@ -14,5 +14,5 @@ services:
     image: ocrankingsley/udagram-api-feed
   frontend:
     build:
-      context: ../../udagram-api-frontend  
+      context: ../../udagram-frontend  
     image: ocrankingsley/udagram-frontend:local
