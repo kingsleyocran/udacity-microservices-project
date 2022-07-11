@@ -28,7 +28,7 @@ jobs:
 
         - docker build -t udagram-api-user ./udagram-api-user
         - docker tag udagram-api-user ocrankingsley / udagram-micro-backend-user:latest
-        - docker push ocrankingsley / udagram-micro-backend-user:latest
+        - docker push ocrankingsley/udagram-micro-backend-user:latest
 
         - docker build -t udagram-frontend ./udagram-frontend
         - docker tag udagram-frontend ocrankingsley/udagram-micro-backend-feed:latest
