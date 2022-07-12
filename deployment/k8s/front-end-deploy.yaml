@@ -1,31 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    service: frontend
   name: frontend
+  labels:
+    app: frontend
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      service: frontend
-  replicas: 2
+      app: frontend
   template:
     metadata:
       labels:
-        service: frontend
-        api: external        
+        app: frontend
     spec:
       containers:
-      - image: ocrankingsley/udagram-frontend:local
-        name: frontend
-        imagePullPolicy: Always          
-        ports:
-        - containerPort: 80
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "1024Mi"
-            cpu: "500m"                
+        - name: frontend
+          image: ocrankingsley/udagram-micro-frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "1G"
+              cpu: "500m"
+            limits:
+              memory: "4G"
+              cpu: "500m"
       restartPolicy: Always

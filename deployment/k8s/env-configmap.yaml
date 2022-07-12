@@ -5,9 +5,9 @@ data:
   AWS_PROFILE: default
   AWS_REGION: us-east-1
   JWT_SECRET: testing
-  POSTGRESS_DB: postgres
-  POSTGRESS_HOST: audagram-psql-dev.c3piaqeifsog.us-east-1.rds.amazonaws.com
-  URL: http://localhost:8100  
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: audagram-psql-dev.c3piaqeifsog.us-east-1.rds.amazonaws.com
+  URL: https://localhost:8100 
 metadata:
   name: env-config
   
