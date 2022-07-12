@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: reverseproxy
-          image: ocrankingsley/udagram-micro-reverseproxy:latest
+          image: ocrankingsley/udagram-micro-reverseproxy:v1
           imagePullPolicy: Always
           resources:
             requests:

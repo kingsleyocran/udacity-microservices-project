@@ -23,20 +23,20 @@ jobs:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         # Building & Tagging Docker Images
         - docker build -t udagram-api-feed ./udagram-api-feed
-        - docker tag udagram-api-feed ocrankingsley/udagram-micro-backendfeed:v1
-        - docker push ocrankingsley/udagram-micro-backendfeed:v1
+        - docker tag udagram-api-feed ocrankingsley/udagram-micro-backendfeed:v2
+        - docker push ocrankingsley/udagram-micro-backendfeed:v2
 
         - docker build -t udagram-api-user ./udagram-api-user
-        - docker tag udagram-api-user ocrankingsley/udagram-micro-backenduser:v1
-        - docker push ocrankingsley/udagram-micro-backenduser:v1
+        - docker tag udagram-api-user ocrankingsley/udagram-micro-backenduser:v2
+        - docker push ocrankingsley/udagram-micro-backenduser:v2
 
         - docker build -t udagram-frontend ./udagram-frontend
-        - docker tag udagram-frontend ocrankingsley/udagram-micro-frontend:v1
-        - docker push ocrankingsley/udagram-micro-frontend:v1
+        - docker tag udagram-frontend ocrankingsley/udagram-micro-frontend:v2
+        - docker push ocrankingsley/udagram-micro-frontend:v2
 
         - docker build -t reverseproxy ./udagram-reverseproxy
-        - docker tag reverseproxy ocrankingsley/udagram-micro-reverseproxy:v1
-        - docker push ocrankingsley/udagram-micro-reverseproxy:v1
+        - docker tag reverseproxy ocrankingsley/udagram-micro-reverseproxy:v2
+        - docker push ocrankingsley/udagram-micro-reverseproxy:v2
 
 branches:
   only:

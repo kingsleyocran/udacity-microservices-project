@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: backend-user
-          image: ocrankingsley/udagram-micro-backend-user:latest
+          image: ocrankingsley/udagram-micro-backenduser:v1
           imagePullPolicy: Always
           resources:
             requests:
@@ -35,12 +35,12 @@ spec:
           env:
             - name: POSTGRES_USERNAME
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   name: env-secret
                   key: POSTGRES_USERNAME
             - name: POSTGRES_PASSWORD
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   name: env-secret
                   key: POSTGRES_PASSWORD
             - name: POSTGRES_HOST

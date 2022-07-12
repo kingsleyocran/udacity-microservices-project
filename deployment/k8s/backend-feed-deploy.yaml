@@ -21,22 +21,26 @@ spec:
     spec:
       containers:
         - name: backend-feed
-          image: ocrankingsley/udagram-micro-backend-feed:latest
+          image: ocrankingsley/udagram-micro-backendfeed:v1
           imagePullPolicy: Always
           resources:
             requests:
+              memory: "2G"
               cpu: "250m"
             limits:
+              memory: "4G"
               cpu: "500m"
+          command: ["/bin/sh"]
+          args: ["-c", "while true; do echo hello; sleep 10;done"]
           env:
             - name: POSTGRES_USERNAME
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   name: env-secret
                   key: POSTGRES_USERNAME
             - name: POSTGRES_PASSWORD
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   name: env-secret
                   key: POSTGRES_PASSWORD
             - name: POSTGRES_HOST
