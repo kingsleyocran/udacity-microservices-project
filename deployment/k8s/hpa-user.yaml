@@ -1,0 +1,26 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2022-07-13T10:43:56Z","reason":"SucceededGetScale","message":"the
+      HPA controller was able to get the target''s current scale"},{"type":"ScalingActive","status":"False","lastTransitionTime":"2022-07-13T10:43:56Z","reason":"FailedGetResourceMetric","message":"the
+      HPA was unable to compute the replica count: failed to get cpu utilization:
+      unable to get metrics for resource cpu: unable to fetch metrics from resource
+      metrics API: the server could not find the requested resource (get pods.metrics.k8s.io)"}]'
+  creationTimestamp: "2022-07-13T10:43:41Z"
+  name: backend-user
+  namespace: default
+  resourceVersion: "3323"
+  uid: ad583fd6-9285-43e9-a680-30e0ae6c7e5e
+spec:
+  maxReplicas: 5
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: backend-user
+  targetCPUUtilizationPercentage: 50
+status:
+  currentReplicas: 2
+  desiredReplicas: 0
+  currentCPUUtilizationPercentage: 0
