@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ocrankingsley/udagram-micro-frontend:v20
+          image: ocrankingsley/udagram-micro-frontend:v2
           imagePullPolicy: Always
           ports:
             - containerPort: 80
