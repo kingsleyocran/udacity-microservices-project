@@ -31,8 +31,8 @@ jobs:
         - docker push ocrankingsley/udagram-micro-backenduser:v2
 
         - docker build -t udagram-frontend ./udagram-frontend
-        - docker tag udagram-frontend ocrankingsley/udagram-micro-frontend:v2
-        - docker push ocrankingsley/udagram-micro-frontend:v2
+        - docker tag udagram-frontend ocrankingsley/udagram-micro-frontend:v20
+        - docker push ocrankingsley/udagram-micro-frontend:v20
 
         - docker build -t reverseproxy ./udagram-reverseproxy
         - docker tag reverseproxy ocrankingsley/udagram-micro-reverseproxy:v2
