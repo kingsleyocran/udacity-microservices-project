@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: backend-user
-          image: ocrankingsley/udagram-micro-backenduser:v3
+          image: ocrankingsley/udagram-micro-backenduser:v2
           imagePullPolicy: Always
           resources:
             requests:
@@ -30,8 +30,6 @@ spec:
             limits:
               memory: "4G"
               cpu: "500m"
-          command: ["/bin/sh"]
-          args: ["-c", "while true; do echo hello; sleep 10;done"]
           env:
             - name: POSTGRES_USERNAME
               valueFrom:
