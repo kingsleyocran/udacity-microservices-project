@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: backend-user
-          image: ocrankingsley/udagram-micro-backenduser:v1
+          image: ocrankingsley/udagram-micro-backenduser:v3
           imagePullPolicy: Always
           resources:
             requests:

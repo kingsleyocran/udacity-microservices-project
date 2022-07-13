@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: backend-feed
-          image: ocrankingsley/udagram-micro-backendfeed:v1
+          image: ocrankingsley/udagram-micro-backendfeed:v3
           imagePullPolicy: Always
           resources:
             requests:
